@@ -1,3 +1,66 @@
+body {
+  background: lightgray;
+  color: darkslategray;
+  text-align: center;
+  font: Helvetica;
+}
+
+section {
+  display: grid;
+  grid-template-areas: "header header header"
+                      "description description description"
+                      "location1 location2 location3"
+                      "footer footer footer";
+}
+
 h1 {
-  color: salmon;
+  grid-area: header;
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+
+h2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: white;
+}
+
+h3 {
+  grid-area: footer;
+  border: 1px solid darkgray;
+  background: white;
+  margin: 10px 34%;
+  padding: 5px;
+  font-size: 10px;
+}
+
+p {
+  grid-area: description;
+  font-size: 12px;
+}
+
+img {
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+}
+
+div {
+  position: relative;
+  margin: 10px;
+}
+
+.first {
+  grid-area: location1;
+}
+
+.second {
+  grid-area: location2;
+}
+
+.third {
+  grid-area: location3;
 }
